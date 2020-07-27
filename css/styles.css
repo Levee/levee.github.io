@@ -50,7 +50,7 @@
   background: #ccc;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 /* The progress bar (scroll indicator) */
@@ -86,8 +86,15 @@
   }
 }
 
+.devicon-divider {
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: #6c757d;
+  width: 17rem;
+}
+
 .devicon-gradient:hover {
-  background: linear-gradient(45deg, #693ff3, #bc60fd);
+  background: radial-gradient(#693ff3, #bc60fd);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10641,7 +10648,7 @@ p.lead {
 }
 
 .dev-icons {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 section.resume-section {
