@@ -88,7 +88,7 @@
 
 .devicon-divider {
   height: 1px;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   background-color: #6c757d;
   width: 17rem;
 }
@@ -104,7 +104,6 @@
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
   position: relative;
-  z-index: 2;
   cursor: pointer;
 }
 
@@ -112,13 +111,13 @@
 [data-tooltip]:before,
 [data-tooltip]:after {
   visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   pointer-events: none;
+  transition: opacity 300ms;
 }
 
-/* Position tooltip above the element */
+/* Position tooltip below the element */
 [data-tooltip]:before {
   position: absolute;
   bottom: -50%;
@@ -137,6 +136,7 @@
   text-align: center;
   font-size: 14px;
   line-height: 1.2;
+  transition: opacity 300ms;
 }
 
 /* Triangle hack to make tooltip look like a speech bubble */
@@ -158,9 +158,8 @@
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
   visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+  opacity: 0.9;
 }
 
 *,
