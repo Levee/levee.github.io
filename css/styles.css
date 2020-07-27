@@ -46,7 +46,7 @@
 
 .progress-container {
   width: 100%;
-  height: 4px;
+  height: 5px;
   background: #ccc;
   position: fixed;
   top: 0;
@@ -55,8 +55,7 @@
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 4px;
-  /* background: #4863ff; */
+  height: 5px;
   width: 0%;
   background: linear-gradient(92deg, #f35626, #feab3a);
   fill: transparent;
@@ -64,6 +63,9 @@
 
   -webkit-fill: transparent;
   -webkit-animation: hue 10s infinite linear;
+
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 @keyframes hue {
@@ -82,6 +84,45 @@
   to {
     -webkit-filter: hue-rotate(-360deg);
   }
+}
+
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+ */
+.list-inline-item .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.list-inline-item .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+  opacity: 1;
+}
+
+.list-inline-item:hover .tooltiptext {
+  visibility: visible;
 }
 
 *,
@@ -433,7 +474,7 @@ h6,
   font-family: "Montserrat", "Saira Extra Condensed", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.2;
   color: #343a40;
 }
@@ -10552,12 +10593,12 @@ p.lead {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 4rem;
+  width: 4rem;
   background-color: #495057;
   color: #fff;
   border-radius: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-right: 1.5rem;
 }
 .social-icons .social-icon:last-child {
@@ -10565,6 +10606,7 @@ p.lead {
 }
 .social-icons .social-icon:hover {
   background-color: #384cbd;
+  text-decoration: none;
 }
 
 .dev-icons {
